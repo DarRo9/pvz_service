@@ -1,0 +1,5 @@
+CREATE TABLE pvz (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    registration_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    city VARCHAR(255) NOT NULL
+);

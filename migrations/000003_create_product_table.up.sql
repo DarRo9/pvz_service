@@ -1,0 +1,6 @@
+CREATE TABLE product (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    reception_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    reception_id UUID NOT NULL REFERENCES reception(id) ON DELETE CASCADE,
+    type VARCHAR(50) NOT NULL
+);
